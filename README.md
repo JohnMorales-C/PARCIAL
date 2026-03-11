@@ -2,37 +2,46 @@
 ## Nombres:
 ### -John Steban Morales Ceron
 ### -Carlos Alberto Obando Torrente
-
+```mermaid
 classDiagram
     class Libro {
-        -titulo: String
-        -autor: String
-        -ejemplares: int
-        -prestados: int
-        +getTitulo(): String
-        +setTitulo(titulo: String): void
-        +getAutor(): String
-        +setAutor(autor: String): void
-        +getEjemplares(): int
-        +setEjemplares(ejemplares: int): void
-        +getPrestados(): int
-        +setPrestados(prestados: int): void
-        +prestamo(): boolean
-        +devolucion(): boolean
-        +toString(): String
+        - String titulo
+        - String autor
+        - int ejemplares
+        - int prestados
+        + Libro()
+        + Libro(String, String, int, int)
+        + String getTitulo()
+        + void setTitulo(String)
+        + String getAutor()
+        + void setAutor(String)
+        + int getEjemplares()
+        + void setEjemplares(int)
+        + int getPrestados()
+        + void setPrestados(int)
+        + boolean prestamo()
+        + boolean devolucion()
+        + String toString()
     }
+
     class LibroTexto {
-        -curso: String
-        +toString(): String
+        - String curso
+        + LibroTexto(String, String, int, int, String)
+        + String toString()
     }
+
     class LibroTextoUNIAC {
-        -facultad: String
-        +toString(): String
+        - String facultad
+        + LibroTextoUNIAC(String, String, int, int, String, String)
+        + String toString()
     }
+
     class Novela {
-        -tipo: String
-        +toString(): String
+        - String tipo
+        + Novela(String, String, int, int, String)
+        + String toString()
     }
-    Libro <|-- LibroTexto : extends
-    LibroTexto <|-- LibroTextoUNIAC : extends
-    Libro <|-- Novela : extends
+
+    Libro <|-- LibroTexto
+    LibroTexto <|-- LibroTextoUNIAC
+    Libro <|-- Novela
