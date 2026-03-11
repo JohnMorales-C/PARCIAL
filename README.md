@@ -13,6 +13,18 @@
 ### metodos getter o setter para acceder a ellos,
 ### las subclases no podrian usarlos directamente.
 
+# Nuevos atributos
+
+### -AñoPublicacion
+
+### -Editorial
+
+# Nuevo método
+
+### Disponible()
+
+### public boolean disponible(){return ejemplares > prestados;}
+
 ```mermaid
 classDiagram
     class Libro {
