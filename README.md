@@ -2,6 +2,17 @@
 ## Nombres:
 ### -John Steban Morales Ceron
 ### -Carlos Alberto Obando Torrente
+
+# Situacion 1:
+### Si la clase Libro fuera declarada como final
+### public final class Libro { }
+### ninguna clase podría heredar de ella.
+
+# Situacion 2:
+### Si los atributos fueran private y no existieran
+### metodos getter o setter para acceder a ellos,
+### las subclases no podrian usarlos directamente.
+
 ```mermaid
 classDiagram
     class Libro {
@@ -45,3 +56,6 @@ classDiagram
     Libro <|-- LibroTexto
     LibroTexto <|-- LibroTextoUNIAC
     Libro <|-- Novela
+
+
+
