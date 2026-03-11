@@ -57,5 +57,8 @@ public class Main {
 
         System.out.println("\nNovela");
         System.out.println(novela1);
+
+        sc.close();
     }
+
 }
